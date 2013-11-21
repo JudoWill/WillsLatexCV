@@ -10,7 +10,6 @@
 \usepackage{pslatex}
 \usepackage{fancyhdr}
 
-
 \title{\emph{Curriculum Vitae}}
 \date{}
 
@@ -23,13 +22,28 @@
   /Keywords ()
 }
 
+\fancypagestyle{firstpage}{
+\fancyhf{}
+\renewcommand{\headrulewidth}{3pt}
+\chead{\LARGE \itshape \bfseries Curriculum Vitae}
+}
 
+\fancypagestyle{otherpages}{
+ \fancyhf{}
+ \renewcommand{\headrulewidth}{1pt}
+ \renewcommand{\footrulewidth}{1pt}
+ \lhead{\itshape Curriculum vitae}
+ \rhead{\itshape William Dampier, Ph.D}
+ \cfoot{\thepage}
+}
 
+\renewcommand{\theenumi}{\textbf{\LARGE \Alph{enumi}}}
 
 
 
 \begin{document}
-\thispagestyle{firststyle}
+\pagestyle{firstpage}
+
 \begin{enumerate}
  \item {\LARGE \itshape \bfseries Name} \newline
  William Dampier
@@ -78,6 +92,7 @@
   \\
   2013-present & & Research Assistant Professor \newline Department of Microbiology and Immunology \newline Drexel University College of Medicine \newline Philadelphia, Pennsylvania\\
  \end{longtable}
+\pagestyle{otherpages}
  \item {\LARGE \itshape \bfseries Certification and Licensure} \newline
  N/A
  \item {\LARGE \itshape \bfseries Military Service} \newline
